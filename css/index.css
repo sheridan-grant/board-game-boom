@@ -1,0 +1,217 @@
+/*
+Green #20b15b - cooperative
+Blue #0171b8 - euro
+Violet #d93a94 - drafting
+Orange #f6941f - Party
+Red #f01a26 - bluffing
+Brown #915835 - deduction
+ */
+
+body {
+  margin: 0;
+  background-color: #cde6d0;
+}
+
+md-sidenav {
+  background-color: transparent;
+}
+
+.heading {
+  width: 670px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ea1e23;
+  color: white;
+  font-size: 35px;
+  font-family: "Trebuchet MS";
+  border: 5px solid black;
+}
+
+.heading h1 {
+  margin: 0;
+  text-shadow: 3px 3px #000;
+}
+
+.input-search-page {
+  border: 2px solid black;
+  height: 33px;
+  margin: 6px;
+  padding-left: 5px;
+}
+
+.main-content {
+  width: 100%;
+  background-color: #cde6d0;
+}
+
+.main-nav {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Horizontal Nav Buttons */
+
+.option-button {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  text-shadow: 1.5px 1.5px #000;
+  border: 2px solid black;
+  color: white;
+}
+
+.login-form {
+  background-color: white;
+  width: fit-content;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 2px solid black;
+}
+
+/* Game Type Heading */
+
+.game-type-heading {
+  width: 660px;
+  display: block;
+  font-family: "Trebuchet MS";
+  background-color: white;
+  text-align: center;
+  border: 5px solid black;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Side Nav */
+
+md-list {
+  padding: 0px;
+}
+
+.list-item {
+  border: 1.5px solid black;
+}
+
+.list-item-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  text-shadow: 1.5px 1.5px #000;
+}
+
+/* Game Cards */
+
+.game-item-card {
+  width: fit-content;
+  border: 1px solid black;
+  padding: 8px;
+  display: inline-grid;
+  background-color: white;
+  margin: 20px;
+}
+
+.game-item-content {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.game-item-header {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  border: 1px solid black;
+  width: 250px;
+}
+
+.game-item-description {
+  font-family: "Trebuchet MS";
+  font-size: 15px;
+  display: inline-block;
+  padding: 20px;
+}
+
+.game-item-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-item-description ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+li i {
+  position: relative;
+  top: 7px;
+}
+
+.game-item-description-text {
+  display: none;
+  width: 545px;
+}
+
+.game-item-img {
+  width: 35%;
+  height: auto;
+  float: right;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 40px;
+  display: none;
+}
+
+.game-item-video {
+  display: none;
+  padding-top: 5px;
+}
+
+.game-item-card-transform {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.game-item-card-transform-active {
+  height: 623px;
+  width: fit-content;
+}
+
+.game-item-content-transform {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.game-item-content-transform-active {
+  height: fit-content;
+}
+
+.game-item-external-links a {
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+/* All Games */
+
+.all-games {
+  margin: 20px;
+}
+
+.center-container {
+  margin-left: 50px;
+}

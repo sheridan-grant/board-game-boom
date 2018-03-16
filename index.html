@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.6/angular-material.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Board Game Boom</title>
+  </head>
+  <body ng-cloak>
+    <div layout="row" ng-controller="Contentcontroller as contentCtrl">
+      <md-sidenav layout="column" md-component-id="left" class="md-sidenav-left">
+        <md-list>
+          <md-list-item class="md-2-line list-item" ng-repeat="item in contentCtrl.gameTypes" ng-click="viewGameType($index)" ng-style="{'background-color':item.color}">
+            <div class="list-item-text">
+              <h3>{{item.name}}</h3>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-sidenav>
+      <md-content class="main-content">
+        <div class="heading">
+          <h1>Board Game Boom</h1>
+        </div>
+        <br>
+        <div class="main-nav">
+          <md-button style="background-color: #ea1e23;" class="option-button" ng-click="openLeftMenu()">
+            Types of Games
+          </md-button>
+          <md-button style="background-color: #ea1e23;" class="option-button" ng-click="showAllGames()">
+            All Board Games
+          </md-button>
+          <input ng-model="search.title" ng-trim="false" class="input-search-page" type="text" name="search" placeholder="Search" ng-keyup="filterResults()">
+        </div>
+        <div class="all-games">
+          <div class="game-type-heading" ng-if="contentCtrl.showAllGames">
+            <p>Board Game Boom is designed to help you find your newest board game and learn about new types of games. Press the titles of the games to see more information about them.</p>
+          </div>
+          <div class="game-type-heading" ng-if="contentCtrl.showGameType">
+            <h1>{{contentCtrl.gameTypes[contentCtrl.gameTypeIndex].name}}</h1>
+            <p>{{contentCtrl.gameTypes[contentCtrl.gameTypeIndex].desc}}</p>
+          </div>
+          <div class="center-container">
+            <div id="{{ 'obj-' + $index }}" class="game-item-card game-item-card-transform" ng-repeat="game in contentCtrl.listOfGames | filter:search track by $index">
+              <div class="game-item-content game-item-content-transform">
+                <div ng-style="{'background-color': game.color}" class="game-item-header" ng-click="toggleGameCard( 'obj-' + $index )">
+                  {{ game.title }}
+                </div>
+                <div class="game-item-description">
+                  <ul>
+                    <li>
+                      <i class="material-icons">&#xE02F;</i>
+                      <span> {{ game.types.join(', ') }} </span>
+                    </li>
+                    <li>
+                      <i class="material-icons">&#xE84E;</i> {{ game.ageMin }}+
+                    </li>
+                    <li>
+                      <i class="material-icons">&#xE01B;</i> {{ game.time }}mins
+                    </li>
+                    <li>
+                      <i class="material-icons">&#xE7EF;</i> {{ game.numPlayers }} players
+                    </li>
+                  </ul>
+                </div>
+                <img class="game-item-img" ng-src="{{ game.link }}" >
+                <div class="game-item-description-text">
+                  &nbsp;&nbsp;&nbsp;&nbsp;{{ game.desc }}
+                </div>
+                <div class="game-item-video">
+                  <iframe width="545" height="345" ng-src="{{ game.watch }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="game-item-external-links">
+                  <a target="_blank" ng-href="{{ game.buy }}">
+                    Purchase
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </md-content>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.6/angular-material.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
