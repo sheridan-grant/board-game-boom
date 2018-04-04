@@ -59,6 +59,14 @@ md-sidenav {
   text-shadow: 1.5px 1.5px #000;
   border: 2px solid black;
   color: white;
+  box-shadow: 3px 3px #00000047;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.option-button:hover {
+  background-color: #C37519 !important;
 }
 
 .login-form {
@@ -73,7 +81,7 @@ md-sidenav {
 /* Game Type Heading */
 
 .game-type-heading {
-  width: 660px;
+  width: 545px;
   display: block;
   font-family: "Trebuchet MS";
   background-color: white;
@@ -93,6 +101,9 @@ md-list {
 
 .list-item {
   border: 1.5px solid black;
+  margin-top: 15px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .list-item-text {
@@ -108,6 +119,7 @@ md-list {
 
 .game-item-card {
   width: fit-content;
+  height: 300px;
   border: 1px solid black;
   padding: 8px;
   display: inline-grid;
@@ -129,6 +141,7 @@ md-list {
   font-weight: bold;
   border: 1px solid black;
   width: 250px;
+  height: 45px;
 }
 
 .game-item-description {
@@ -199,10 +212,15 @@ li i {
   height: fit-content;
 }
 
+
+.game-item-external-links {
+  position: relative;
+}
+
 .game-item-external-links a {
+  float: right;
   text-decoration: none;
   font-weight: bold;
-  float: right;
   color: black;
 }
 

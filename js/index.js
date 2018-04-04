@@ -53,8 +53,9 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
       if ($(id + ' img.game-item-img').is(":visible")) {
         $(id + ' .game-item-img').toggle('slow');
         $(id + ' .game-item-video').toggle('slow');
+        $(id + '.game-item-card').height("300px");
+        $(id + ' div div.game-item-header').width("250px");
         setTimeout(function() {
-          $(id + ' div div.game-item-header').width("250px");
           $(id + ' div.game-item-card-transform').toggleClass('game-item-card-transform-active');
           $(id + ' div div.game-item-description-text').toggle('slow');
           $(id + ' div.game-item-content-transform').toggleClass('game-item-content-transform-active');
@@ -63,6 +64,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         $(id + ' div.game-item-card-transform').toggleClass('game-item-card-transform-active');
         $(id + ' div.game-item-content-transform').toggleClass('game-item-content-transform-active');
         setTimeout(function() {
+          $(id + '.game-item-card').height("fit-content");
           $(id + ' div div.game-item-header').width("auto");
           $(id + ' img.game-item-img').toggle('slow');
           $(id + ' div div.game-item-description-text').toggle('slow');

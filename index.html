@@ -13,7 +13,7 @@
         <md-list>
           <md-list-item class="md-2-line list-item" ng-repeat="item in contentCtrl.gameTypes" ng-click="viewGameType($index)" ng-style="{'background-color':item.color}">
             <div class="list-item-text">
-              <h3>{{item.name}}</h3>
+              <h3 style="text-align: center;">{{item.name}}</h3>
             </div>
           </md-list-item>
         </md-list>
@@ -24,13 +24,13 @@
         </div>
         <br>
         <div class="main-nav">
-          <md-button style="background-color: #ea1e23;" class="option-button" ng-click="openLeftMenu()">
+          <md-button style="background-color: #F6941F;" class="option-button" ng-click="openLeftMenu()">
             Types of Games
           </md-button>
-          <md-button style="background-color: #ea1e23;" class="option-button" ng-click="showAllGames()">
+          <md-button style="background-color: #F6941F;" class="option-button" ng-click="showAllGames()">
             All Board Games
           </md-button>
-          <input ng-model="search.title" ng-trim="false" class="input-search-page" type="text" name="search" placeholder="Search" ng-keyup="filterResults()">
+          <input ng-model="search.title" ng-trim="false" class="input-search-page" type="text" name="search" placeholder="Search Titles" ng-keyup="filterResults()">
         </div>
         <div class="all-games">
           <div class="game-type-heading" ng-if="contentCtrl.showAllGames">
@@ -53,7 +53,7 @@
                       <span> {{ game.types.join(', ') }} </span>
                     </li>
                     <li>
-                      <i class="material-icons">&#xE84E;</i> {{ game.ageMin }}+
+                      <i class="material-icons">&#xE84E;</i>For Ages {{ game.ageMin }}+
                     </li>
                     <li>
                       <i class="material-icons">&#xE01B;</i> {{ game.time }}mins
