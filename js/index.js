@@ -76,32 +76,32 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
     contentCtrl.gameTypes = [{
         "name": "Drafting",
         "desc": "These types of games have players \"draft\" cards in consecutive rounds. At each round, players must evaluate where they stand and the other players to draft the proper cards.",
-        "color": "#d93a94",
+        "color": "#F6941F",
         "games": [7, 9, 12, 13]
       }, {
         "name": "Euro",
         "desc": "This is the style of game that Europeans tend to make. These games tend to have a lot of resource management and worker placement in them. This is one of the board game types that tend to have less variance (luck) and is more focused on skilled play. Mathmeticians tend to favor board game types like this because there are a lot of number calculations involved throughout the game.",
-        "color": "#0171b8",
+        "color": "#F6941F",
         "games": [10, 11, 16, 17]
       }, {
         "name": "Bluffing",
         "desc": "Bluffing games give players hidden identities, or roles. They must use these secret roles to help them on their various missions. Generally, the more information a player gives up about their role, the better action they get to take. This is fun because it causes players to valuate high risk, high reward situations.",
-        "color": "#f01a26",
+        "color": "#F6941F",
         "games": [0, 3, 4, 8]
       }, {
         "name": "Deduction",
         "desc": "When you play deduction games, you are given small amounts of known information. It is your job to use this information to deduce (narrow down) what you think the answer to the puzzle is.",
-        "color": "#915835",
+        "color": "#F6941F",
         "games": [0, 3, 8, 14]
       }, {
         "name": "Cooperative",
         "desc": "Players unite against the game and either “win as a team” or “lose as a team”. The game’s AI (Artificial Intelligence) generally has it’s own turn where new information is revealed to players and “bad things” happen. In Pandemic, the AI reveals diseases and outbreaks across the world that require players to work together to cure before the world is overwhelmed.",
-        "color": "#20b15b",
+        "color": "#F6941F",
         "games": [2, 5, 6, 14]
       }, {
         "name": "Party",
         "desc": "If you have a big group of people, then party games are typically what gets played. These games are designed to handle a lot of people and are easier for players to learn. A well designed party game can be learned in less than 5 minutes and give players the creative ability to produce funny scenarios.",
-        "color": "#f6941f",
+        "color": "#F6941F",
         "games": [1, 3, 8, 15]
       }];
 
@@ -112,7 +112,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 60,
         "numPlayers": "3-4",
         "types": ['Bluffing', 'Deduction'],
-        "color": "#f01a26",
+        "color": "#0171b8",
         "link": "img/revolution.jpg",
         "watch": "http://www.youtube.com/embed/WEfDV_sub6E",
         "buy": "http://a.co/4RXd1BY"
@@ -123,7 +123,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 20,
         "numPlayers": "3-5",
         "types": ['Party'],
-        "color": "#f6941f",
+        "color": "#0171b8",
         "link": "img/walk_the_plank.jpg",
         "watch": "http://www.youtube.com/embed/a294DWVlto0",
         "buy": "http://a.co/8kFS2UA"
@@ -134,7 +134,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 10,
         "numPlayers": "1-5",
         "types": ['Cooperative'],
-        "color": "#20b15b",
+        "color": "#0171b8",
         "link": "img/escape.jpg",
         "watch": "http://www.youtube.com/embed/precx0zmetg",
         "buy": "http://a.co/iXuEMkk"
@@ -145,7 +145,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 10,
         "numPlayers": "3-10",
         "types": ['Bluffing', 'Deduction', 'Party'],
-        "color": "#f6941f",
+        "color": "#0171b8",
         "link": "img/one_night_ult_werewolf.jpg",
         "watch": "http://www.youtube.com/embed/dQcG1mOa5fY",
         "buy": "http://a.co/e9Zw6he"
@@ -156,7 +156,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 60,
         "numPlayers": "3-5",
         "types": ['Bluffing'],
-        "color": "#f01a26",
+        "color": "#0171b8",
         "link": "img/sheriff_of_nottingham.jpg",
         "watch": "http://www.youtube.com/embed/czYKbtCT9D0",
         "buy": "http://a.co/9Hvyrsf"
@@ -167,7 +167,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 45,
         "numPlayers": "2-4",
         "types": ['Cooperative'],
-        "color": "#20b15b",
+        "color": "#0171b8",
         "link": "img/pandemic.jpg",
         "watch": "http://www.youtube.com/embed/UIpoDcPj8VU",
         "buy": "http://a.co/b9Hqano"
@@ -178,7 +178,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 60,
         "numPlayers": "1-6",
         "types": ['Cooperative'],
-        "color": "#20b15b",
+        "color": "#0171b8",
         "link": "img/castle_panic.jpg",
         "watch": "http://www.youtube.com/embed/cSccFBceyKE",
         "buy": "http://a.co/gLs09PB"
@@ -189,7 +189,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 30,
         "numPlayers": "2-7",
         "types": ['Drafting'],
-        "color": "#d93a94",
+        "color": "#0171b8",
         "link": "img/wonders.jpg",
         "watch": "http://www.youtube.com/embed/2rACazNmWjg",
         "buy": "http://a.co/3INyWW2"
@@ -200,7 +200,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 15,
         "numPlayers": "2-8",
         "types": ['Bluffing', 'Deduction', 'Party'],
-        "color": "#915835",
+        "color": "#0171b8",
         "link": "img/codenames.jpg",
         "watch": "http://www.youtube.com/embed/DpZvT76SP88",
         "buy": "http://a.co/dP6n5uj"
@@ -211,7 +211,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 15,
         "numPlayers": "2-5",
         "types": ['Drafting'],
-        "color": "#d93a94",
+        "color": "#0171b8",
         "link": "img/sushi_go.jpg",
         "watch": "http://www.youtube.com/embed/MQXMfSedbVw",
         "buy": "http://a.co/hxPL6YR"
@@ -244,7 +244,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": "30-60",
         "numPlayers": "2-5",
         "types": ['Drafting'],
-        "color": "#d93a94",
+        "color": "#0171b8",
         "link": "img/ticket_to_ride.jpg",
         "watch": "http://www.youtube.com/embed/r0od4NBvnBc",
         "buy": "http://a.co/jbNjZhx"
@@ -255,7 +255,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 30,
         "numPlayers": "2-4",
         "types": ['Drafting'],
-        "color": "#d93a94",
+        "color": "#0171b8",
         "link": "img/splendor.jpg",
         "watch": "http://www.youtube.com/embed/JF-I44_EF7g",
         "buy": "http://a.co/guFNXgu"
@@ -266,7 +266,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 60,
         "numPlayers": "3-6",
         "types": ['Deduction', 'Cooperative'],
-        "color": "#915835",
+        "color": "#0171b8",
         "link": "img/betrayal_at_house_on_the_hill.jpg",
         "watch": "http://www.youtube.com/embed/8GL-VvJjPT4",
         "buy": "http://a.co/g2YQslC"
@@ -277,7 +277,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
         "time": 15,
         "numPlayers": "2-5",
         "types": ['Party'],
-        "color": "#f6941f",
+        "color": "#0171b8",
         "link": "img/exploding_kittens.png",
         "watch": "http://www.youtube.com/embed/kAkRKuv5Rts",
         "buy": "http://a.co/7TGPs3m"
