@@ -21,23 +21,21 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
       contentCtrl.showGameType = false;
       contentCtrl.listOfGames.length = 0;
 
-      var gamesOfType = contentCtrl.gameTypes[idx].games;
       var name = contentCtrl.gameTypes[idx].name.toLowerCase();
 
       $http({
         method: 'GET',
         url: 'data/' + name + '.json'
       }).then(function successCallback(response) {
-          console.log(response);
+          var gamesOfType = response.data.data;
+          for (var i = 0; i < gamesOfType.length; i++) {
+            contentCtrl.listOfGames.push(games[gamesOfType[i]]);
+          }
+
+          $mdSidenav('left').toggle();
         }, function errorCallback(response) {
           console.log('error getting game type information');
         });
-
-      for (var i = 0; i < gamesOfType.length; i++) {
-        contentCtrl.listOfGames.push(games[gamesOfType[i]]);
-      }
-
-      $mdSidenav('left').toggle();
     };
 
     $scope.openLeftMenu = function() {
