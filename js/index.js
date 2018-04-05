@@ -1,5 +1,5 @@
 angular.module('App', ['ngMaterial', 'ngAnimate'])
-  .controller('Contentcontroller', ['$scope', '$mdDialog', '$mdSidenav', function ($scope, $mdDialog, $mdSidenav, $http) {
+  .controller('Contentcontroller', ['$scope', '$mdDialog', '$mdSidenav', '$http', function ($scope, $mdDialog, $mdSidenav, $http) {
     var contentCtrl = this;
 
     contentCtrl.showAllGames = true;
