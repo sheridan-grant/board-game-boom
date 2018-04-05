@@ -1,5 +1,5 @@
 angular.module('App', ['ngMaterial', 'ngAnimate'])
-  .controller('Contentcontroller', ['$scope', '$mdDialog', '$mdSidenav', '$http', function ($scope, $mdDialog, $mdSidenav, $http) {
+  .controller('Contentcontroller', ['$scope', '$mdDialog', '$mdSidenav', function ($scope, $mdDialog, $mdSidenav) {
     var contentCtrl = this;
 
     contentCtrl.showAllGames = true;
@@ -17,25 +17,17 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
     $scope.viewGameType = function(idx) {
 
       contentCtrl.gameTypeIndex = idx;
-      contentCtrl.showAllGames = true;
-      contentCtrl.showGameType = false;
+      contentCtrl.showAllGames = false;
+      contentCtrl.showGameType = true;
       contentCtrl.listOfGames.length = 0;
 
-      var name = contentCtrl.gameTypes[idx].name.toLowerCase();
+      var gamesOfType = contentCtrl.gameTypes[idx].games;
 
-      $http({
-        method: 'GET',
-        url: 'data/' + name + '.json'
-      }).then(function successCallback(response) {
-          var gamesOfType = response.data.data;
-          for (var i = 0; i < gamesOfType.length; i++) {
-            contentCtrl.listOfGames.push(games[gamesOfType[i]]);
-          }
+      for (var i = 0; i < gamesOfType.length; i++) {
+        contentCtrl.listOfGames.push(games[gamesOfType[i]]);
+      }
 
-          $mdSidenav('left').toggle();
-        }, function errorCallback(response) {
-          console.log('error getting game type information');
-        });
+      $mdSidenav('left').toggle();
     };
 
     $scope.openLeftMenu = function() {
