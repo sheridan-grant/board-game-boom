@@ -22,12 +22,20 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
       contentCtrl.listOfGames.length = 0;
 
       var gamesOfType = contentCtrl.gameTypes[idx].games;
+      var name = contentCtrl.gameTypes[idx].name.toLowerCase();
+
+      $http({
+        method: 'GET',
+        url: 'data/' + name + '.json'
+      }).then(function successCallback(response) {
+          console.log(response);
+        }, function errorCallback(response) {
+          console.log('error getting game type information');
+        });
 
       for (var i = 0; i < gamesOfType.length; i++) {
         contentCtrl.listOfGames.push(games[gamesOfType[i]]);
       }
-
-      console.log(JSON.stringify(contentCtrl.listOfGames));
 
       $mdSidenav('left').toggle();
     };
@@ -37,7 +45,7 @@ angular.module('App', ['ngMaterial', 'ngAnimate'])
     };
 
     $scope.filterResults = function() {
-      console.log($scope.search)
+
     };
 
     $scope.showAllGames = function() {
