@@ -43,7 +43,7 @@
           <div class="center-container">
             <div id="{{ 'obj-' + $index }}" class="game-item-card game-item-card-transform" ng-repeat="game in contentCtrl.listOfGames | filter:search track by $index">
               <div class="game-item-content game-item-content-transform">
-                <div ng-style="{'background-color': game.color}" class="game-item-header" ng-click="toggleGameCard( 'obj-' + $index )">
+                <div class="game-item-header" ng-click="toggleGameCard( 'obj-' + $index )">
                   {{ game.title }}
                 </div>
                 <div class="game-item-description">
